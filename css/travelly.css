@@ -1,0 +1,378 @@
+/* Global styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    /* font-size: 1rem; */
+}
+
+h1 {
+    font-size: 2.6rem;
+}
+
+li,
+button,
+label input,
+p {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+h4,
+h5 {
+    font-size: 2.8rem;
+}
+
+
+/* button plus hover transition effects(can also be done with keyframess) */
+
+button {
+    border: none;
+    color: white;
+    padding: 2rem 4rem;
+    font-size: 1.8rem;
+    background-color: blue;
+    cursor: pointer;
+    transition: background 0.5s ease-in-out;
+    -webkit-transition: background 0.5s ease-in-out;
+    -moz-transition: background 0.5s ease-in-out;
+    -ms-transition: background 0.5s ease-in-out;
+    -o-transition: background 0.5s ease-in-out;
+}
+
+button:focus {
+    background: rgb(70, 62, 93);
+    outline-style: solid;
+}
+
+button:hover {
+    background: rgb(89, 89, 238);
+}
+
+
+/* NAV SECTION WITH HERO */
+
+.main-head {
+    background-color: #131c27;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+nav {
+    min-height: 10vh;
+    display: flex;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+
+ul {
+    display: flex;
+    flex: 1 1 40rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#logo {
+    flex: 1 1 40rem;
+    font-family: "pattaya";
+    font-weight: 500;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* learn to use linser gradient below (linear-gradient (rgba(0.0.0.0.5), transparent),) */
+
+.hero {
+    min-height: 90vh;
+    background: url("/img/landing-page.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h3 {
+    padding: 5rem;
+}
+
+
+/* BENEFIT SECTION */
+
+#locations {
+    min-height: 100vh;
+    background: url("../img/new-york-page.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.locations-head {
+    width: 90%;
+    margin: auto;
+}
+
+.locations-head h2 {
+    padding: 1rem 0rem;
+    text-decoration: underline;
+    text-decoration-thickness: 0.5rem;
+}
+
+.locations-head h3 {
+    padding: 1rem 0rem;
+}
+
+.cloud {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+}
+
+.cloud {
+    width: 80vw;
+    height: 80vh;
+}
+
+
+/* transition effects added to cloud images */
+
+.moving-cloud-1 {
+    animation: cloudAnimation 3s infinite alternate ease-in-out;
+    -webkit-animation: cloudAnimation 3s infinite alternate ease-in-out;
+}
+
+.moving-cloud-2 {
+    top: 20%;
+    z-index: -2;
+    opacity: 0.5;
+    animation: cloudAnimation 4s infinite alternate ease-in-out;
+    -webkit-animation: cloudAnimation 4s infinite alternate ease-in-out;
+}
+
+
+/* adding transitions using keyframes(need to understand more */
+
+@keyframes cloudAnimation {
+    from {
+        transform: translate(10%, -10%);
+        /*movesonxandyaxis*/
+        -webkit-transform: translate(10%, 10%);
+        -moz-transform: translate(10%, -10%);
+        -ms-transform: translate(10%, -10%);
+        -o-transform: translate(10%, -10%);
+        -webkit-transform: translate(10%, -10%);
+    }
+    to {
+        transform: translte(0%, 0%);
+        -webkit-transform: translte(0%, 0%);
+        -moz-transform: translte(0%, 0%);
+        -ms-transform: translte(0%, 0%);
+        -o-transform: translte(0%, 0%);
+    }
+}
+
+
+/* BENEFITS SECTION */
+
+.benefits-head {
+    background: #343c44;
+    padding: 3rem;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.benefits-head h3 {
+    padding: 1rem;
+}
+
+.cards {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    min-height: 70vh;
+    flex-wrap: wrap;
+}
+
+.card {
+    text-align: center;
+    flex: 1 1 25rem;
+    min-height: 40vh;
+    margin: 2rem 5rem;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+/* max-width and margin is used to contain the element */
+
+.cards img {
+    max-width: 15%;
+    margin: 2rem;
+}
+
+.card h4,
+p {
+    padding: 1rem;
+}
+
+.card-icon {
+    background-color: rgb(44, 61, 107);
+}
+
+#contact {
+    min-height: 100vh;
+    background: url("/img/contact-mountain.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* background and border-radius added to form wrapper */
+
+.form-wrapper {
+    /* height: 100vh; */
+    background: rgba(19, 28, 39, 0.8);
+    width: 60%;
+    color: white;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.form-head {
+    text-align: center;
+    padding: 4rem;
+}
+
+.name-form,
+.email-form {
+    padding: 3rem;
+    text-align: center;
+}
+
+.form-wrapper label {
+    margin: 0rem 3rem;
+}
+
+.form-wrapper button {
+    width: 100%;
+    padding: 2rem;
+    margin-top: 10rem;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.form-wrapper input {
+    padding: 1rem 3rem;
+}
+
+footer {
+    color: white;
+    background: #131c27;
+}
+
+.footer-wrapper {
+    width: 90%;
+    display: flex;
+    min-height: 10vh;
+    padding: 2rem;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer h5 {
+    flex: 1 1 40rem;
+}
+
+footer ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    flex: 1 1 40rem;
+    align-items: center;
+}
+
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 950px) {
+    html {
+        font-size: 45%;
+    }
+    nav {
+        text-align: center;
+    }
+    #logo {
+        padding: 2rem;
+    }
+    .cloud {
+        height: 60rem;
+        /* The pointer-events CSS property sets under what circumstances (if any) a particular graphic element can become the target of pointer events. */
+        pointer-events: none;
+    }
+    /* images moved behind background at different indexes */
+    .moving-cloud-1 {
+        z-index: -1;
+    }
+    .moving-cloud-2 {
+        z-index: -2;
+    }
+    .locations-head h3 {
+        background: rgba(19, 28, 39, 0.9)
+    }
+    .form-wrapper {
+        width: 100%;
+    }
+    footer {
+        text-align: center;
+    }
+    footer h5 {
+        padding-bottom: 3rem;
+    }
+}
